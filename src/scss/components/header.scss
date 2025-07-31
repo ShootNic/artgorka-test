@@ -1,0 +1,309 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background-color: $whiteMain;
+  padding: 16px 0;
+
+  &.open {
+
+    .header {
+
+      &__wrap {
+        opacity: 1;
+        pointer-events: initial;
+      }
+    }
+  }
+
+  &__wrap {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px;
+    opacity: 0;
+    border-top: 1px solid $accent;
+    background-color: $whiteMain;
+    pointer-events: none;
+    transition: opacity .3s;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    display: block;
+    width: 108px;
+    height: 38px;
+    background-color: transparent;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: svg-load("../svg/logo.svg");
+  }
+
+  &__menu {
+    margin-top: 22px;
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 27px;
+      list-style: none;
+      padding-left: 0;
+      margin: 0;
+
+      li {
+        text-align: center;
+
+        a {
+          color: $accent;
+          font-family: $titleFont;
+          font-weight: 600;
+          font-size: 32px;
+          line-height: 96%;
+          letter-spacing: -1.6px;
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  &__phone {
+    display: inline-block;
+    color: $accent;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    padding: 14px 0;
+    margin-top: auto;
+  }
+
+  &__btn-modal {
+    //display: none;
+  }
+
+  &__btn-menu {
+    width: 48px;
+    height: 48px;
+    font-size: 0;
+    background-color: transparent;
+    background-size: 48px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: svg-load("../svg/burger-menu-button.svg");
+    border: none;
+    transition: all .3s;
+
+    .open & {
+      background-image: svg-load("../svg/burger-menu-cross.svg");
+    }
+  }
+
+  @media (min-width: $tablet) {
+    padding: 24px 0;
+
+    &.open {
+
+      .header {
+
+        &__menu {
+          opacity: 1;
+          pointer-events: initial;
+        }
+      }
+    }
+
+    &__wrap {
+      position: static;
+      flex-direction: row;
+      align-items: center;
+      gap: 0;
+      opacity: 1;
+      pointer-events: initial;
+      border: none;
+      padding: 0;
+    }
+
+    &__menu {
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      top: 95px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      padding: 16px;
+      opacity: 0;
+      border-top: 1px solid $accent;
+      background-color: $whiteMain;
+      margin-top: 0;
+      pointer-events: none;
+      transition: opacity .3s;
+
+      ul {
+        margin-top: 21px;
+
+        li {
+
+          a {
+            font-size: 40px;
+            line-height: 105%;
+            letter-spacing: -1px;
+          }
+        }
+      }
+    }
+
+    &__phone {
+      position: relative;
+      margin-left: auto;
+      padding: 10px 0 14px;
+      margin-top: 0;
+    }
+
+    &__btn-modal {
+      display: inline-block;
+      margin-right: auto;
+      margin-left: 32px;
+    }
+  }
+
+  @media (min-width: $laptop) {
+
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      height: 1px;
+      width: 0;
+      bottom: 0px;
+      left: 0;
+      right: 0;
+      background-color: $accent;
+      transition: width 1s;
+    }
+
+    &:hover {
+      color: $accent;
+
+      &:after {
+        width: 100%;
+        transition: width 1s;
+      }
+    }
+  }
+
+  @media (min-width: $desktop) {
+
+    &__wrap {
+      flex-shrink: 0;
+      flex-grow: 1;
+    }
+
+    &__menu {
+      display: block;
+      position: static;
+      opacity: 1;
+      pointer-events: initial;
+      border: none;
+      padding: 0;
+
+      ul {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 32px;
+        list-style: none;
+        padding-left: 0;
+        margin-left: 65px;
+        margin-top: 0;
+
+        li {
+
+          a {
+            display: block;
+            position: relative;
+            font-family: $mainFont;
+            color: $primary;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 20px;
+            letter-spacing: 0;
+            padding: 3px 0 7px;
+            transition: color .3s;
+
+
+            &:after {
+              content: '';
+              display: block;
+              position: absolute;
+              height: 1px;
+              width: 0;
+              bottom: 5px;
+              left: 0;
+              right: 0;
+              opacity: 0;
+              background-color: $accent;
+              transition: all .3s;
+            }
+
+            &:hover {
+              color: $accent;
+
+              &:after {
+                width: 100%;
+                opacity: 1;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &__phone {
+
+      &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        height: 1px;
+        width: 0;
+        bottom: 12px;
+        left: 0;
+        right: 0;
+        opacity: 0;
+        background-color: $accent;
+        transition: all .3s;
+      }
+
+      &:hover {
+        color: $accent;
+
+        &:after {
+          width: 100%;
+          opacity: 1;
+        }
+      }
+    }
+
+    &__btn-menu {
+      display: none;
+    }
+
+    &__btn-modal {
+      margin-right: 0;
+      margin-left: 41px;
+    }
+  }
+}

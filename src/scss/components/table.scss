@@ -1,0 +1,85 @@
+.table {
+  margin-bottom: 95px;
+
+  &__title {
+    color: $accent;
+    font-family: $titleFont;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 105%;
+    letter-spacing: -1.6px;
+    margin-bottom: 1px;
+  }
+
+  table {
+    border-collapse: collapse;
+
+    tr {
+      display: grid;
+      gap: 14px;
+      padding: 40px 0 29px;
+      border-bottom: 1px solid $borderPrimary;
+
+      td {
+        display: block;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+
+        &:first-child {
+          font-weight: 600;
+        }
+      }
+    }
+  }
+
+  @media (min-width: $tablet) {
+    padding-top: 49px;
+
+    &__title {
+      font-size: 54px;
+      line-height: 105%;
+      letter-spacing: -2px;
+      margin-bottom: 29px;
+    }
+
+    table {
+
+      tr {
+        display: table-row;
+        padding: 0;
+
+        td {
+          display: table-cell;
+          vertical-align: top;
+          padding-bottom: 39px;
+          padding-top: 40px;
+
+          &:first-child {
+            min-width: 247px;
+          }
+        }
+      }
+    }
+  }
+
+  @media (min-width: $laptop) {
+
+  }
+
+  @media (min-width: $desktop) {
+
+    table {
+
+      tr {
+
+        td {
+
+          &:first-child {
+            min-width: 393px;
+          }
+        }
+      }
+    }
+  }
+}

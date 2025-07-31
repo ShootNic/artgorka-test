@@ -1,0 +1,61 @@
+.button {
+  color: $whiteMain;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  padding: 16px 40px;
+  border: none;
+  transition: all .3s;
+
+  &--filled {
+
+    &-primary {
+      background-color: $accent;
+      color: $whiteMain;
+
+      &:hover {
+        background-color: $accentActive;
+      }
+    }
+
+    &-secondary {
+      background-color: $whiteMain;
+      color: $accent;
+
+      &:hover {
+        background-color: $bgSecondary;
+      }
+    }
+  }
+
+  &--bordered {
+
+    &-primary {
+      color: $accent;
+      background-color: transparent;
+      border: 1px solid $border;
+      padding: 15px 39px;
+
+      &:hover {
+        border: 1px solid $accent;
+      }
+    }
+
+    &-secondary {
+      background-color: transparent;
+      padding: 15px 39px;
+    }
+  }
+
+  @media (min-width: $tablet) {
+
+  }
+
+  @media (min-width: $laptop) {
+
+  }
+
+  @media (min-width: $desktop) {
+
+  }
+}

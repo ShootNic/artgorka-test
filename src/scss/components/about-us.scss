@@ -1,0 +1,116 @@
+.about-us {
+  margin: 0 -6px 114px;
+
+  &__title {
+    color: $accent;
+    font-family: $titleFont;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 105%;
+    text-align: center;
+    letter-spacing: -1.6px;
+    margin-bottom: 43px;
+  }
+
+  &__inner {
+    display: grid;
+    gap: 10px;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 180px;
+    color: $whiteMain;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    padding: 50px 60px;
+    background-color: $accent;
+    border-radius: 160px;
+  }
+
+  @media (min-width: $tablet) {
+    padding-top: 46px;
+    margin-inline: 0;
+
+    &__title {
+      font-size: 54px;
+      line-height: 105%;
+      letter-spacing: -2px;
+      margin-bottom: 69px;
+    }
+
+    &__inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      background-color: transparent;
+      background-size: 80px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-image: svg-load("../svg/logo-md.svg");
+    }
+
+    &__item {
+
+      &:nth-child(3) {
+        order: 4;
+      }
+
+      &:nth-child(4n+1),
+      &:nth-child(4n+3) {
+        border-top-left-radius: 160px;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 160px;
+        border-bottom-left-radius: 0;
+      }
+
+      &:nth-child(4n+2),
+      &:nth-child(4n+4) {
+        border-top-left-radius: 0;
+        border-top-right-radius: 160px;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 160px;
+      }
+    }
+  }
+
+  @media (min-width: $laptop) {
+
+    &__inner {
+      background-size: 100px;
+    }
+
+    &__item {
+      min-height: 194px;
+      font-size: 20px;
+      line-height: 26px;
+      padding: 58px 80px;
+
+      &:nth-child(4n+1),
+      &:nth-child(4n+3) {
+        border-top-left-radius: 200px;
+        border-bottom-right-radius: 200px;
+      }
+
+      &:nth-child(4n+2),
+      &:nth-child(4n+4) {
+        border-top-right-radius: 200px;
+        border-bottom-left-radius: 200px;
+      }
+    }
+  }
+
+  @media (min-width: $desktop) {
+
+    &__item {
+      padding: 58px 90px;
+    }
+
+    &__inner {
+      background-size: 80px;
+    }
+  }
+}

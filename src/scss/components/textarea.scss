@@ -1,0 +1,38 @@
+.textarea {
+  width: 100%;
+  color: $primary;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  padding: 15px 19px;
+  border: 1px solid $borderPrimary;
+  background-color: transparent;
+  resize: none;
+  transition: all .3s;
+
+  &::placeholder {
+    color: #424C5CB3;
+  }
+
+  &:hover {
+    border: 1px solid $accent;
+  }
+
+  &:focus {
+    background-color: $bgSecondary;
+  }
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    line-height: 26px;
+    padding: 15px 23px;
+  }
+
+  @media (min-width: $laptop) {
+
+  }
+
+  @media (min-width: $desktop) {
+
+  }
+}

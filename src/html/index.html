@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Test</title>
+  <link rel="shortcut icon" type="image/png" href="/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap" rel="stylesheet">
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=de6e3a8e-09bc-41b5-ba12-105a23648a97&lang=ru_RU" type="text/javascript"></script>
+</head>
+<body>
+  <header class="header js-header">
+    <div class="container">
+      <div class="header__inner">
+        <span class="header__logo"></span>
+        <div class="header__wrap">
+          <nav class="header__menu">
+            <ul>
+              <li><a href="#studio">Студия</a></li>
+              <li><a href="#projects">Проекты</a></li>
+              <li><a href="#services">Услуги</a></li>
+              <li><a href="#contacts">Контакты</a></li>
+            </ul>
+          </nav>
+          <a class="header__phone" href="tel:88002228684">8 800 222 86 84</a>
+          <button class="header__btn-modal button button--bordered-primary js-modal-open" data-target="form">Обсудить проект</button>
+        </div>
+        <button class="header__btn-menu js-menu-toggle">Меню</button>
+      </div>
+    </div>
+  </header>
+  <main>
+    <div class="container">
+      <section class="main-screen">
+        <h1 class="main-screen__title">Тестовое задание</h1>
+        <p class="main-screen__subtitle">на вакансию веб-разработчика в студию <a href="#">Art gorka</a></p>
+        <div class="main-screen__links">
+          <a class="main-screen__link button button--filled-primary" href="#">Нажми меня</a>
+          <a class="main-screen__link button button--bordered-primary" href="#">Меня тоже нажми</a>
+        </div>
+        <div class="main-screen__items">
+          <a href="#" class="main-screen__item">
+            <img class="main-screen__item-img" src="assets/images/category-card-2.jpg" alt="Картинка проектов">
+            <span class="main-screen__item-title">Лендинги</span>
+          </a>
+          <a href="#" class="main-screen__item">
+            <img class="main-screen__item-img" src="assets/images/category-card-1.jpg" alt="Картинка проектов">
+            <span class="main-screen__item-title">Корпоративные сайты</span>
+          </a>
+        </div>
+      </section>
+    </div>
+    <section class="slider">
+      <div class="container">
+        <div class="swiper slider__inner js-carousel">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="slider__item">
+                <img class="slider__item-img" src="assets/images/slide-image.jpg" alt="Картинка слайдера">
+                <div class="slider__item-inner">
+                  <p class="slider__item-title">Какой-то слайдер</p>
+                  <p class="slider__item-text">Какое-то описание чего-то там, бла-бла-бла</p>
+                  <a class="slider__item-link" href="#">Перейти куда-то</a>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="slider__item">
+                <img class="slider__item-img" src="assets/images/slide-image.jpg" alt="Картинка слайдера">
+                <div class="slider__item-inner">
+                  <p class="slider__item-title">Какой-то слайдер</p>
+                  <p class="slider__item-text">Какое-то описание чего-то там, бла-бла-бла</p>
+                  <a class="slider__item-link" href="#">Перейти куда-то</a>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="slider__item">
+                <img class="slider__item-img" src="assets/images/slide-image.jpg" alt="Картинка слайдера">
+                <div class="slider__item-inner">
+                  <p class="slider__item-title">Какой-то слайдер</p>
+                  <p class="slider__item-text">Какое-то описание чего-то там, бла-бла-бла</p>
+                  <a class="slider__item-link" href="#">Перейти куда-то</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="slider__controls">
+            <div class="swiper-button-prev">
+              <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle class="circle" cx="24" cy="24" r="23.75" stroke="#696FE5" stroke-width="1"/>
+              </svg>
+            </div>
+            <div class="swiper-button-next">
+              <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle class="circle" cx="24" cy="24" r="23.75" stroke="#696FE5" stroke-width="1"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="studio" class="about-studio">
+      <div class="container">
+        <div class="about-studio__head">
+          <div class="about-studio__head-inner">
+            <h2 class="about-studio__title">Что-то про студию</h2>
+            <div class="about-studio__text">
+              <p>Создаём эффективные веб-продукты и дизайн с 2011 года.</p>
+              <p>Подход на стыке бизнеса, креатива и технологий, с акцентом на аналитику и юзабилити.</p>
+            </div>
+          </div>
+          <a class="about-studio__head-link button button--bordered-primary" href="#">Перейти на сайт студии</a>
+        </div>
+      </div>
+      <div class="about-studio__images js-drag-scroll">
+        <div class="about-studio__images-item">
+          <img class="about-studio__image" src="assets/images/about-studio-1.jpg" alt="Картинка студии">
+        </div>
+        <div class="about-studio__images-item">
+          <img class="about-studio__image" src="assets/images/about-studio-2.jpg" alt="Картинка студии">
+        </div>
+        <div class="about-studio__images-item">
+          <img class="about-studio__image" src="assets/images/about-studio-3.jpg" alt="Картинка студии">
+        </div>
+        <div class="about-studio__images-item">
+          <img class="about-studio__image" src="assets/images/about-studio-1.jpg" alt="Картинка студии">
+        </div>
+        <div class="about-studio__images-item">
+          <img class="about-studio__image" src="assets/images/about-studio-2.jpg" alt="Картинка студии">
+        </div>
+        <div class="about-studio__images-item">
+          <img class="about-studio__image" src="assets/images/about-studio-3.jpg" alt="Картинка студии">
+        </div>
+      </div>
+      <div class="container">
+        <div class="about-studio__footer">
+          <div class="about-studio__footer-item">
+            <p class="about-studio__footer-number">10 000+</p>
+            <p class="about-studio__footer-text">правок в дизайне внесено</p>
+          </div>
+          <div class="about-studio__footer-item">
+            <p class="about-studio__footer-number">15</p>
+            <p class="about-studio__footer-text">человек в команде</p>
+          </div>
+          <div class="about-studio__footer-item">
+            <p class="about-studio__footer-number">13</p>
+            <p class="about-studio__footer-text">лет в индустрии</p>
+          </div>
+          <div class="about-studio__footer-item">
+            <p class="about-studio__footer-number">150 м<sup>2</sup></p>
+            <p class="about-studio__footer-text">площадь офиса</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="container">
+      <section class="gallery">
+        <h2 class="gallery__title">Какая-то галерея</h2>
+        <div class="gallery__inner">
+          <img class="gallery__item" src="assets/images/gallery-1.jpg" alt="Галерея">
+          <img class="gallery__item" src="assets/images/gallery-2.jpg" alt="Галерея">
+          <img class="gallery__item" src="assets/images/gallery-3.jpg" alt="Галерея">
+          <img class="gallery__item" src="assets/images/gallery-4.jpg" alt="Галерея">
+          <img class="gallery__item" src="assets/images/gallery-5.jpg" alt="Галерея">
+        </div>
+      </section>
+      <section id="projects" class="projects">
+        <h2 class="projects__title">Какие-то наши проекты</h2>
+        <div class="projects__tabs js-tabs">
+          <button class="projects__tabs-item js-tabs-item active">Все</button>
+          <button class="projects__tabs-item js-tabs-item">Разработка сайта</button>
+          <button class="projects__tabs-item js-tabs-item">Контекстная реклама</button>
+          <button class="projects__tabs-item js-tabs-item">SMM</button>
+        </div>
+        <div class="projects__inner">
+          <article class="projects__item">
+            <div class="projects__item-wrap">
+              <img class="projects__item-img" src="assets/images/project-card-image-1.jpg" alt="Картинка проекта">
+            </div>
+            <p class="projects__item-title">Цифровая стоматология «ДоДоктор»</p>
+            <div class="projects__item-tags">
+              <span class="projects__item-tag">разработка сайта</span>
+              <span class="projects__item-tag">контекстная реклама</span>
+              <span class="projects__item-tag">SMM</span>
+            </div>
+            <a class="projects__item-link" href="#">dodoktor.com</a>
+          </article>
+          <article class="projects__item">
+            <div class="projects__item-wrap">
+              <img class="projects__item-img" src="assets/images/project-card-image-2.jpg" alt="Картинка проекта">
+            </div>
+            <p class="projects__item-title">«Адепт Модуль» — строительство модульных домов</p>
+            <div class="projects__item-tags">
+              <span class="projects__item-tag">разработка сайта</span>
+              <span class="projects__item-tag">контекстная реклама</span>
+            </div>
+            <a class="projects__item-link" href="#">adeptmodul.ru</a>
+          </article>
+          <article class="projects__item">
+            <div class="projects__item-wrap">
+              <img class="projects__item-img" src="assets/images/project-card-image-3.jpg" alt="Картинка проекта">
+            </div>
+            <p class="projects__item-title">Якутская топливно-энергетическая компания (ЯТЭК)</p>
+            <div class="projects__item-tags">
+              <span class="projects__item-tag">разработка сайта</span>
+              <span class="projects__item-tag">обслуживание</span>
+            </div>
+            <a class="projects__item-link" href="#">yatec.ru</a>
+          </article>
+          <article class="projects__item">
+            <div class="projects__item-wrap">
+              <img class="projects__item-img" src="assets/images/project-card-image-4.jpg" alt="Картинка проекта">
+            </div>
+            <p class="projects__item-title">Сеть медицинских клиник «ОДОНТ» <br>в Санкт-Петербурге </p>
+            <div class="projects__item-tags">
+              <span class="projects__item-tag">разработка сайта</span>
+              <span class="projects__item-tag">обслуживание</span>
+            </div>
+            <a class="projects__item-link" href="#">odont.ru</a>
+          </article>
+        </div>
+      </section>
+      <section id="services" class="table">
+        <h2 class="table__title">Какая-то табличка</h2>
+        <table>
+          <tr>
+            <td>Исследование</td>
+            <td>Погружаемся в ваш бизнес, разбираем текущую ситуацию, выясняем цели и задачи, изучаем целевую аудиторию, конкурентов и лучшие практики рынка</td>
+          </tr>
+          <tr>
+            <td>Дизайн</td>
+            <td>Проектируем продукт, который будет отвечать потребностям пользователей и решать задачи бизнеса</td>
+          </tr>
+          <tr>
+            <td>Разработка</td>
+            <td>Разрабатываем решение на оптимальном стеке технологий, с чистым кодом и оптимизацией</td>
+          </tr>
+          <tr>
+            <td>Контент</td>
+            <td>Создаём и редактируем контент, загружаем его через админ-панели</td>
+          </tr>
+          <tr>
+            <td>Маркетинг</td>
+            <td>Продвигаем ваш продукт, настраиваем рекламу, ведём соцсети</td>
+          </tr>
+        </table>
+      </section>
+      <section class="direction">
+        <h2 class="direction__title">Чем мы обычно занимаемся</h2>
+        <div class="direction__accordion js-accordion">
+          <div class="direction__accordion-item">
+            <button class="direction__accordion-btn">Исследование <span></span></button>
+            <div class="direction__accordion-content">
+              <ul>
+                <li>Постановка целей и задач проекта</li>
+                <li>Знакомство с бизнесом клиента / отраслью</li>
+                <li>Сбор информации и бизнес-требований</li>
+                <li>Определение команды проекта</li>
+                <li>Аудит текущего продукта</li>
+                <li>Анализ конкурентов</li>
+                <li>Исследование целевой аудитории / пользователей
+                  <ul>
+                    <li>Наблюдение</li>
+                    <li>Опросы</li>
+                    <li>Интервью</li>
+                  </ul>
+                </li>
+                <li>Jobs-To-Be-Done</li>
+                <li>Job/user stories</li>
+                <li>Ценностное предложение</li>
+                <li>Карта пользовательского пути (CJM)</li>
+                <li>Анализ технических особенностей и определение подходящего стека технологий</li>
+              </ul>
+            </div>
+          </div>
+          <div class="direction__accordion-item">
+            <button class="direction__accordion-btn">Дизайн <span></span></button>
+            <div class="direction__accordion-content">
+              <ul>
+                <li>Информационная архитектура</li>
+                <li>Карта объектов / сущностей</li>
+                <li>Пользовательские сценарии (user flow)</li>
+                <li>Lo-fi прототипы</li>
+                <li>Визуально-смысловой анализ</li>
+                <li>Дизайн-концепция</li>
+                <li>Создание дизайн-макетов для экранов разного формата</li>
+                <li>Hi-fi прототипы (опционально)</li>
+                <li>Подготовка макетов к разработке</li>
+                <li>UI-кит / дизайн-система</li>
+                <li>Дизайн-ревью</li>
+              </ul>
+            </div>
+          </div>
+          <div class="direction__accordion-item">
+            <button class="direction__accordion-btn">Разработка <span></span></button>
+            <div class="direction__accordion-content">
+              <ul>
+                <li>Разработка архитектуры (компоненты, модули, взаимодействия и логика работы продукта)</li>
+                <li>Frontend-разработка
+                  <ul>
+                    <li>HTML/CSS/JS</li>
+                    <li>React.js</li>
+                    <li>Vue.js</li>
+                    <li>Вёрстка для разных форматов экрана</li>
+                  </ul>
+                </li>
+                <li>Backend
+                  <ul>
+                    <li>PHP</li>
+                    <li>Запросы</li>
+                    <li>Базы данных</li>
+                    <li>API</li>
+                    <li>Обработка данных</li>
+                    <li>Аутентификация</li>
+                    <li>Безопасность</li>
+                  </ul>
+                </li>
+                <li>Контроль версий через Git</li>
+                <li>Оптимизация кода</li>
+                <li>Оптимизация контента</li>
+                <li>Базовая SEO-оптимизация</li>
+                <li>Интеграции
+                  <ul>
+                    <li>CMS
+                      <ul>
+                        <li>1С-Битрикс</li>
+                        <li>Wordpress</li>
+                        <li>ModX</li>
+                        <li>Joomla</li>
+                      </ul>
+                    </li>
+                    <li>CRM</li>
+                    <li>Системы аналитики</li>
+                    <li>Системы согласия</li>
+                  </ul>
+                </li>
+                <li>Тестирование и исправление ошибок</li>
+                <li>Выгрузка продукта на сервер (деплой)</li>
+                <li>Настройка хостинга</li>
+              </ul>
+            </div>
+          </div>
+          <div class="direction__accordion-item">
+            <button class="direction__accordion-btn">Контент <span></span></button>
+            <div class="direction__accordion-content">
+              <ul>
+                <li>Копирайтинг и рерайтинг</li>
+                <li>Создание 2D/3D иллюстраций и графики</li>
+                <li>Анимированная графика</li>
+                <li>Создание 3D-визуализации (компания-партнёр Paint Effect)</li>
+                <li>Обработка фото</li>
+                <li>Видеомонтаж</li>
+                <li>Подбор подрядчика для фото/видео съёмки</li>
+                <li>Контент-менеджмент</li>
+                <li>Разработка сценариев</li>
+              </ul>
+            </div>
+          </div>
+          <div class="direction__accordion-item">
+            <button class="direction__accordion-btn">Маркетинг <span></span></button>
+            <div class="direction__accordion-content">
+              <ul>
+                <li>Формирование бренда</li>
+                <li>Оформление соцсетей (ВК)</li>
+                <li>Ведение соцсетей (ВК)</li>
+                <li>Таргетированная реклама</li>
+                <li>Контекстная реклама</li>
+                <li>SEO-оптимизация</li>
+                <li>Рекламные баннеры и объявления</li>
+                <li>Оформление для маркетплейсов (OZON, Wildberries, мегамаркет)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="about-us">
+        <h2 class="about-us__title">Тут всякие классные штуки про нас</h2>
+        <div class="about-us__inner">
+          <div class="about-us__item">
+            Небольшая и дружная команда специалистов, не держим у себя лишних людей
+          </div>
+          <div class="about-us__item">
+            Настроены на долгосрочные отношения с клиентами
+          </div>
+          <div class="about-us__item">
+            Здравый смысл в работе — наше всё
+          </div>
+          <div class="about-us__item">
+            Прозрачный и понятный процесс работы
+          </div>
+        </div>
+      </section>
+      <section class="prelude">
+        <h2 class="prelude__title">Неизбежная прелюдия перед проектом</h2>
+        <div class="prelude__content">
+          <div class="prelude__item">
+            <div class="prelude__item-inner">
+              <p class="prelude__item-title">Знакомимся и обсуждаем проект</p>
+              <div class="prelude__item-content">
+                <p>Оставляйте заявку <a href="#">на сайте,</a> <a href="#">на почту</a> или звоните по <a href="#">8 (921) 0 250 250.</a></p>
+                <p>Наш менеджер ответит вам, предварительно обсудим, какие задачи нужно решить. После этого предложим заполнить бриф, где вы сможете подробно рассказать о проекте.</p>
+            </div>
+            </div>
+          </div>
+          <div class="prelude__item">
+            <div class="prelude__item-inner">
+              <p class="prelude__item-title">Организуем встречу</p>
+              <div class="prelude__item-content">
+                <p>Онлайн или оффлайн. Погрузимся в детали проекта, уточним все пожелания и ожидания. Пройдёмся по ключевым моментам из брифа. Обсудим варианты решения задачи. </p>
+              </div>
+            </div>
+          </div>
+          <div class="prelude__item">
+            <div class="prelude__item-inner">
+              <p class="prelude__item-title">Оцениваем и отправляем КП</p>
+              <div class="prelude__item-content">
+                <p>После встречи собираем все требования и приступаем к оценке проекта.</p>
+                <p>По итогу отправляем вам детальное коммерческое предложение с описанием всех этапов работы, сроками и стоимостью проекта.</p>
+              </div>
+            </div>
+          </div>
+          <div class="prelude__item">
+            <div class="prelude__item-inner">
+              <p class="prelude__item-title">Заключаем договор и приступаем к работе</p>
+              <div class="prelude__item-content">
+                <p>Обсуждаем условия сотрудничества, составляем договор и начинаем работу.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <section class="feedback">
+      <div class="container">
+        <div class="feedback__inner">
+          <h2 class="feedback__title">Давайте обсудим ваш проект</h2>
+          <p class="feedback__text">Заполните форму, и наш менеджер свяжется с вами</p>
+          <form class="feedback__form">
+            <label class="input__label">
+              <input class="input" id="name" name="name" type="text" placeholder="Имя">
+            </label>
+            <label class="input__label">
+              <input class="input" type="tel" id="phone" name="phone" required minlength="6" placeholder="Телефон">
+              <span class="input__message">Поле заполнено некорректно</span>
+            </label>
+            <label class="input__label">
+              <input class="input" type="email" id="email" name="email" placeholder="Email">
+            </label>
+            <button class="feedback__btn button button--filled-secondary">Отправить</button>
+          </form>
+          <p class="feedback__note">Нажимая кнопку «Отправить» вы соглашаетесь на <a href="#">обработку персональных данных.</a></p>
+        </div>
+      </div>
+    </section>
+    <div class="container">
+      <div id="contacts" class="contacts">
+        <div class="contacts__info">
+          <h2 class="contacts__title">Свяжитесь с нами</h2>
+          <p class="contacts__text">Отвечаем в будние дни с 9:00 до 18:00</p>
+          <div class="contacts__items">
+            <div class="contacts__col">
+              <div class="contacts__item">
+                <img class="contacts__item-img" src="assets/images/contact-person-avatar-1.jpg" alt="Фото сотрудника">
+                <div class="contacts__item-inner">
+                  <a class="contacts__item-phone" href="tel:89999999999">8 (999) 999 99 99</a>
+                  <p class="contacts__item-text">Константин</p>
+                </div>
+              </div>
+              <div class="contacts__item">
+                <img class="contacts__item-img" src="assets/images/contact-person-avatar-2.jpg" alt="Фото сотрудника">
+                <div class="contacts__item-inner">
+                  <a class="contacts__item-phone" href="tel:89999999999">8 (999) 999 99 99</a>
+                  <p class="contacts__item-text">Александр</p>
+                </div>
+              </div>
+            </div>
+            <div class="contacts__col contacts__col--secondary">
+              <div class="contacts__item-inner">
+                <a class="contacts__item-phone" href="tel:88002228684">8 800 222 86 84</a>
+                <p class="contacts__item-text contacts__item-text--alt">Бесплатные звонки по России</p>
+              </div>
+              <div class="contacts__item-link-wrap">
+                <a class="contacts__item-link" href="#">info@artgorka.ru</a>
+                <button class="contacts__btn-copy js-copy">Копировать</button>
+              </div>
+              <p class="contacts__item-address">Великий Новгород, ул. Студенческая, 14 (4 этаж)</p>
+            </div>
+          </div>
+        </div>
+        <div class="contacts__map" id="map"></div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="container">
+        <div class="footer__inner">
+          <a class="footer__policy" href="#">Политика обработки персональных данных</a>
+          <p class="footer__copyright">© 2024 Art gorka</p>
+        </div>
+      </div>
+    </div>
+  </main>
+  <div class="modal js-modal" data-modal="form">
+    <div class="modal__overlay js-modal-close"></div>
+    <div class="modal__inner">
+      <button class="modal__btn-close js-modal-close">Закрыть</button>
+      <div class="modal__content">
+        <p class="modal__title">Оставьте заявку</p>
+        <p class="modal__text">Заполните форму, и наш менеджер свяжется с вами</p>
+        <form class="modal__form">
+          <label class="input__label">
+            <input class="input input--light" id="name2" name="name" type="text" placeholder="Имя">
+          </label>
+          <label class="input__label input__label--light">
+            <input class="input input--light" type="tel" id="phone2" name="phone" required minlength="6" placeholder="Телефон">
+            <span class="input__message">Поле заполнено некорректно</span>
+          </label>
+          <label class="input__label">
+            <input class="input input--light" type="email" id="email2" name="email" placeholder="Email">
+          </label>
+          <textarea name="request" id="request" rows="4" class="textarea" placeholder="Опишите ваш запрос"></textarea>
+          <button class="modal__btn button button--filled-primary">Отправить</button>
+        </form>
+        <p class="modal__note">Нажимая кнопку «Отправить» вы соглашаетесь на <a href="#">обработку персональных данных.</a></p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

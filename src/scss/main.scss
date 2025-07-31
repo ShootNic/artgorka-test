@@ -1,0 +1,25 @@
+@import "~normalize.css";
+@import "~swiper/swiper-bundle.css";
+
+//переменные
+@import "variables";
+//основные стили
+@import "base";
+//компоненты
+@import "components/button";
+@import "components/input";
+@import "components/header";
+@import "components/main-screen";
+@import "components/slider";
+@import "components/about-studio";
+@import "components/gallery";
+@import "components/projects";
+@import "components/table";
+@import "components/direction";
+@import "components/about-us";
+@import "components/prelude";
+@import "components/feedback";
+@import "components/contacts";
+@import "components/footer";
+@import "components/modal";
+@import "components/textarea";

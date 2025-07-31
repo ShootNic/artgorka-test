@@ -1,0 +1,93 @@
+.feedback {
+  background-color: $accent;
+
+  &__inner {
+    padding-top: 94px;
+    padding-bottom: 78px;
+  }
+
+  &__title {
+    color: $whiteMain;
+    font-family: $titleFont;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 105%;
+    letter-spacing: -1.6px;
+    margin-bottom: 23px;
+  }
+
+  &__text {
+    color: $grayLight70;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 40px;
+  }
+
+  &__form {
+    display: grid;
+    gap: 16px;
+    margin-bottom: 42px;
+  }
+
+  &__btn {
+
+  }
+
+  &__note {
+    color: $grayLight70;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+
+    a {
+      color: $whiteMain;
+      text-decoration: underline;
+      text-decoration-style: solid;
+      text-decoration-offset: 0%;
+      text-decoration-thickness: 0%;
+
+    }
+  }
+
+  @media (min-width: $tablet) {
+
+    &__title {
+      font-size: 54px;
+      line-height: 105%;
+      letter-spacing: -2px;
+      margin-bottom: 20px;
+    }
+
+    &__text {
+      font-size: 20px;
+      line-height: 26px;
+      margin-bottom: 47px;
+    }
+
+    &__btn {
+      font-size: 20px;
+      padding-block: 22px;
+    }
+
+    &__form {
+      margin-bottom: 48px;
+    }
+  }
+
+  @media (min-width: $laptop) {
+
+    &__form {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      gap: 8px;
+    }
+
+    &__note {
+      text-align: right;
+    }
+  }
+
+  @media (min-width: $desktop) {
+
+  }
+}

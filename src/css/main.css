@@ -1,0 +1,11 @@
+@font-face {
+  font-family: 'Gilroy';
+  src: url('/assets/fonts/Gilroy-Semibold.eot');
+  src: local('Gilroy Semibold'), local('Gilroy-Semibold'),
+  url('/assets/fonts/Gilroy-Semibold.eot?#iefix') format('embedded-opentype'),
+  url('/assets/fonts/Gilroy-Semibold.woff2') format('woff2'),
+  url('/assets/fonts/Gilroy-Semibold.woff') format('woff'),
+  url('/assets/fonts/Gilroy-Semibold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}

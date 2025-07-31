@@ -1,0 +1,92 @@
+.gallery {
+  padding-bottom: 94px;
+
+  &__title {
+    color: $accent;
+    font-family: $titleFont;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 105%;
+    letter-spacing: -1.6px;
+    margin-bottom: 42px;
+  }
+
+  &__inner {
+    display: grid;
+    gap: 8px;
+  }
+
+  &__item {
+    width: 100%;
+    object-fit: cover;
+    aspect-ratio: 82 / 49;
+  }
+
+
+  @media (min-width: $tablet) {
+    padding-top: 64px;
+
+    &__title {
+      font-size: 54px;
+      line-height: 105%;
+      letter-spacing: -2px;
+      margin-bottom: 68px;
+    }
+
+    &__inner {
+      grid-template-rows: 146px 146px 200px;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-areas: 'a a a b'
+                           'a a a c'
+                           'd d e e';
+    }
+
+    &__item {
+      aspect-ratio: initial;
+      height: 100%;
+
+      &:nth-child(1) {
+        grid-area: a;
+      }
+
+      &:nth-child(2) {
+        grid-area: b;
+      }
+
+      &:nth-child(3) {
+        grid-area: c;
+      }
+
+      &:nth-child(4) {
+        grid-area: d;
+      }
+
+      &:nth-child(5) {
+        grid-area: e;
+      }
+    }
+  }
+
+  @media (min-width: $laptop) {
+
+    &__inner {
+      grid-template-rows: 230px 80px 230px;
+      grid-template-columns: 304px 200px 1fr 1fr;
+      grid-template-areas: 'a a b b'
+                           'a a c c'
+                           'e d c c';
+    }
+  }
+
+  @media (min-width: $desktop) {
+
+    &__inner {
+      grid-template-rows: 300px 192px 300px;
+      grid-template-columns: repeat(5, 1fr);
+      grid-template-areas:
+        "a a a b b"
+        "a a a c c"
+        "e e d c c";
+    }
+  }
+}

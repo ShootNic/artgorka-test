@@ -1,0 +1,11 @@
+import 'normalize.css';
+import './css/main.css';
+import './scss/main.scss';
+import './js/slider';
+import './js/accordion';
+import './js/tabs';
+import './js/modal';
+import './js/menu';
+import './js/copy';
+import './js/map';
+import './js/drag-scroll';

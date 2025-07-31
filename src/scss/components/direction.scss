@@ -1,0 +1,146 @@
+.direction {
+  margin-bottom: 93px;
+
+  &__title {
+    color: $accent;
+    font-family: $titleFont;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 105%;
+    letter-spacing: -1.6px;
+    margin-bottom: 19px;
+  }
+
+  &__accordion {
+
+    &-item {
+      padding-bottom: 23px;
+      border-bottom: 1px solid $borderPrimary;
+      transition: border-color .3s;
+
+      &:hover {
+        border-color: $accent;
+      }
+
+      &.open {
+        border-bottom: 1px solid $accent;
+
+        .direction__accordion {
+
+          &-content {
+            display: block;
+          }
+
+          &-btn {
+            color: $accent;
+
+            span {
+              transform: rotate(45deg);
+            }
+          }
+        }
+      }
+    }
+
+    &-btn {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      text-align: left;
+      font-size: 20px;
+      line-height: 120%;
+      padding: 24px 0 0;
+      background-color: transparent;
+      border: none;
+      transition: color .3s;
+
+      &:hover {
+        color: $accent;
+      }
+
+      span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        width: 40px;
+        height: 40px;
+        transition: transform .3s;
+
+        &:before,
+        &:after {
+          content: '';
+          display: block;
+          width: 24px;
+          height: 1px;
+          background-color: $accent;
+        }
+
+        &:after {
+          position: absolute;
+          transform: rotate(90deg);
+        }
+      }
+    }
+
+    &-content {
+      display: none;
+      padding-top: 4px;
+
+      ul {
+        list-style: disc;
+        padding-left: 24px;
+        padding-top: 12px;
+        margin-bottom: 0;
+
+        li {
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 20px;
+          margin-bottom: 12px;
+        }
+
+        &>li:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  @media (min-width: $tablet) {
+    padding-top: 25px;
+
+    &__title {
+      font-size: 54px;
+      line-height: 105%;
+      letter-spacing: -2px;
+      margin-bottom: 29px;
+    }
+
+    &__accordion {
+
+      &-btn {
+        font-size: 24px;
+        line-height: 120%;
+        padding-top: 39px;
+      }
+
+      &-item {
+        padding-bottom: 40px;
+      }
+    }
+  }
+
+  @media (min-width: $laptop) {
+    padding-top: 124px;
+
+    &__accordion {
+      max-width: 813px;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    padding-top: 45px;
+  }
+}

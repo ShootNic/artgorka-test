@@ -1,0 +1,112 @@
+.input {
+  width: 100%;
+  color: $whiteMain;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  padding: 13px 19px;
+  border: 1px solid $grayLight20;
+  background-color: transparent;
+  transition: all .3s;
+
+  &::placeholder {
+    color: $grayLight70;
+  }
+
+  &:hover {
+    border: 1px solid $whiteMain;
+  }
+
+  &:focus,
+  &:active {
+    background-color: $accentActive;
+  }
+
+  &:required:invalid:focus {
+    background-color: $bgError;
+    border: 1px solid $borderError;
+
+    ~ .input__message {
+      opacity: 1;
+    }
+  }
+
+  &--light {
+    color: $primary;
+    border: 1px solid $borderPrimary;
+
+    &::placeholder {
+      color: #424C5CB3;
+    }
+
+    &:hover {
+      border: 1px solid $accentActive;
+    }
+
+    &:focus,
+    &:active {
+      background-color: $bgSecondary;
+    }
+  }
+
+  &__label {
+    width: 100%;
+    display: block;
+    position: relative;
+
+    &:has(input[required]) {
+
+      &:before {
+        content: '*';
+        position: absolute;
+        top: 8px;
+        left: 6px;
+        color: $whiteMain;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 100%;
+      }
+    }
+
+    &--light {
+
+      &:has(input[required]) {
+
+        &:before {
+          color: $accent;
+        }
+      }
+    }
+  }
+
+  &__message {
+    display: block;
+    position: absolute;
+    color: $whiteMain;
+    font-size: 16px;
+    line-height: 20px;
+    left: 0;
+    right: 0;
+    top: calc(100% + 8px);
+    opacity: 0;
+    transition: opacity .3s;
+
+    .input__label--light & {
+      color: $primary;
+    }
+  }
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    line-height: 26px;
+    padding: 15px 23px;
+  }
+
+  @media (min-width: $laptop) {
+    padding: 18px 23px;
+  }
+
+  @media (min-width: $desktop) {
+
+  }
+}

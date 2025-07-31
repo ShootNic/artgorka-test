@@ -1,0 +1,134 @@
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity .3s;
+
+  &.show {
+    opacity: 1;
+    pointer-events: initial;
+  }
+
+  &__overlay {
+    position: absolute;
+    inset: 0;
+  }
+
+  &__inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    background-color: $whiteMain;
+    padding: 46px 16px;
+  }
+
+  &__btn-close {
+    position: absolute;
+    display: block;
+    width: 48px;
+    height: 48px;
+    top: 0;
+    right: 0;
+    font-size: 0;
+    background-color: transparent;
+    background-size: 24px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: svg-load("../svg/icon-cross.svg");
+    border: none;
+  }
+
+  &__content {
+
+  }
+
+  &__title {
+    color: $accent;
+    font-family: $titleFont;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 105%;
+    letter-spacing: -1.6px;
+    margin-bottom: 18px;
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 32px;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  &__btn {
+    margin-bottom: 32px;
+  }
+
+  &__note {
+    color: $primary;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+
+    a {
+      color: $accent;
+      text-decoration: underline;
+      text-decoration-style: solid;
+      text-decoration-offset: 0%;
+      text-decoration-thickness: 0%;
+
+    }
+  }
+
+  @media (min-width: $tablet) {
+
+    &__title {
+      font-size: 54px;
+      line-height: 105%;
+      letter-spacing: -2px;
+      margin-bottom: 20px;
+    }
+
+    &__text {
+      font-size: 20px;
+      line-height: 26px;
+      margin-bottom: 40px;
+    }
+
+    &__inner {
+      padding: 60px 24px;
+    }
+
+    &__btn {
+      font-size: 20px;
+      line-height: 100%;
+      padding: 22px 40px;
+      margin-bottom: 40px;
+    }
+  }
+
+  @media (min-width: $laptop) {
+    backdrop-filter: blur(16px);
+    background-color: #424C5C99;
+
+    &__inner {
+      z-index: 1;
+      max-width: 720px;
+      height: auto;
+    }
+  }
+
+  @media (min-width: $desktop) {
+
+  }
+}

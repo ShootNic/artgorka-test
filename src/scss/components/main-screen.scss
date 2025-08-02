@@ -109,9 +109,16 @@
 
   @media (min-width: $laptop) {
 
+    &.first-load-animation {
+      animation: load-animation linear 1.5s;
+      animation-fill-mode: both;
+    }
+
     &__items {
       grid-template-columns: 1fr 1fr;
       gap: 10px;
+      animation-fill-mode: both;
+      animation: load-animation2 linear 1.5s;
     }
 
     &__item {
@@ -158,5 +165,48 @@
     &__item-img {
       height: 480px;
     }
+
+    &__items {
+      animation: load-animation3 linear 1.5s;
+    }
+  }
+}
+
+@keyframes load-animation {
+  0% {
+    transform: translateY(-105%);
+  }
+  35% {
+    transform: translateY(-30%);
+  }
+  75% {
+    transform: translateY(-30%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+@keyframes load-animation2 {
+  0% {
+    margin: 0 calc(-50vw + 516px);
+  }
+  75% {
+    margin: 0 calc(-50vw + 516px);
+  }
+  100% {
+    margin: 0;
+  }
+}
+
+@keyframes load-animation3 {
+  0% {
+    margin: 0 calc(-50vw + 681px);
+  }
+  75% {
+    margin: 0 calc(-50vw + 681px);
+  }
+  100% {
+    margin: 0;
   }
 }
